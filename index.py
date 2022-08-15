@@ -12,6 +12,10 @@ base_feeds = [
     "https://www.investing.com/rss/news_25.rss",
     "https://www.investing.com/rss/stock_stock_picks.rss",
     "https://www.investing.com/rss/news_25.rss",
+    "https://feeds.a.dj.com/rss/WSJcomUSBusiness.xml",
+    "http://feeds.marketwatch.com/marketwatch/topstories/",
+    "http://feeds.marketwatch.com/marketwatch/realtimeheadlines/",
+    "http://feeds.marketwatch.com/marketwatch/bulletins",
 ]
 
 
@@ -32,3 +36,7 @@ def get_feeds():
                 # result["pubtime"] = str(tru_date)
                 packed.append(result)
     return render_template("index.html", collection=packed)
+
+
+if __name__ == "__main__":
+    app.run()
